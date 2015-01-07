@@ -1,20 +1,50 @@
-<form action="/user/create" method="POST" class="form-signin">
-	<h2>Sign Up Here</h2>
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+
+  });
+  </script>
+
+<p align="center"><strong>Welcome to Kitty | Mutiplayer Card Game Trial</strong></p>
 
 
 
-	<input type="text" class="input-block-level" placeholder="your name" name="name"/>
-
-	<input type="text" class="input-block-level" placeholder="your title" name="title"/>
-
-	<input type="text" class="input-block-level" placeholder="email address" name="email"/>
-
-	<input type="password" class="input-block-level" placeholder="password" name="password" id="password"/>
-
-	<input type="password" class="input-block-level" placeholder="password confirmation" name="confirmation"/>
-	<br />
-
-	<input type="submit" class="btn btn-large btn-primary" value="Create User"/>
-	
+<div id="tabs" align="center">
+  <ul style="position:absolute; left:555px;">
+    <li><a href="#tabs-1">Login</a></li>
+    <li><a href="#tabs-2" >Signup</a></li>
+ </ul>
+<div style="height:90px;"></div>
+<div id="tabs-1">
+<form action="/process" method="post">
+<label>Email:</label>
+<div><input name="username" type="text" /></div>
+<label>Password:</label>
+<div><input name="password" type="password" /></div>
+</br>
+<a href="/auth/facebook">Login With Facebook</a>
+<div><input type="submit" /></div>
+<p><a style="text-decoration:underline; cursor:pointer;">Forgot Password ?</a></p>
 </form>
 
+</div>
+
+
+
+<div id="tabs-2">
+<form action="/user/create" method="POST">
+
+<div><input name="username" type="email" placeholder="E-Mail" /></div>
+</br>
+<div><input name="name" type="text" placeholder="Name" /></div>
+</br>
+<div><input name="password" type="password" placeholder="Password"  /></div>
+</br>
+<div><input name="re_password" type="password" placeholder="Re-Passwprd"  /></div>
+</br>
+<div><input type="submit" /></div>
+
+
+    <input type="hidden" name="_csrf" value="<%=_csrf%>" />
+</form>
+</div>

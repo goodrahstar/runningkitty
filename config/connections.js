@@ -7,5 +7,6 @@ module.exports.connections = {
 //        password: process.env.OPENSHIFT_MONGODB_DB_PASSWORD,
 //        database: 'devesh1234'
         url: process.env.OPENSHIFT_MONGODB_DB_URL + "kitty"
+        
     }
 }

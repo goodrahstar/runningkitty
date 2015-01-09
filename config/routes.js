@@ -44,6 +44,9 @@ module.exports.routes = {
     controller: 'AuthController',
     action: 'processcheck'
   },
+    '/user/gametable/': {
+    view: 'user/gametable'
+  },
 
   '/logout': {
     controller: 'AuthController',
